@@ -1,2 +1,2 @@
-backend\settings.py
-backend\__pycache__
+/backend\settings.py
+/backend\__pycache__
