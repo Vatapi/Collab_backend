@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 class Project(models.Model):
     choices_project = (
-        ('completed' , 'completed'),
-        ('collab' , "looking for collaboration")
+        ('completed' , 'Completed'),
+        ('collab' , "Looking for Collaboration")
     )
     title = models.CharField(max_length = 100)
     description = models.TextField()
