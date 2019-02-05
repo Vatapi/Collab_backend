@@ -1,2 +1,4 @@
 /backend/settings.py
-/backend/__pycache__
+/backend/__pycache__/
+/project/__pycache__/
+/project/migrations/
