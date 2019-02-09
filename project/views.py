@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import UserSerializer, UserSerializerWithToken , ProjectSerializer
 from django.contrib.auth.models import User
-from rest_framework import viewsets
+from rest_framework import viewsets , filters
 from .models import Project
 
 @api_view(['GET'])
@@ -27,3 +27,5 @@ class UserList(APIView):
 class ProjectViewset(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+    filter_backends = (filters.SearchFilter,)
+    search_fields = ('user_posted__username' , 'title' , 'skills')

@@ -6,7 +6,7 @@ from .models import Project
 class UserSerializer(serializers.ModelSerializer):
      class Meta:
          model = User
-         fields = ('username' , 'email')
+         fields = ('id', 'username' , 'email')
 
 class UserSerializerWithToken(serializers.ModelSerializer):
     token = serializers.SerializerMethodField()
@@ -30,7 +30,7 @@ class UserSerializerWithToken(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username','email','password','token',)
+        fields = ('id','username','email','password','token',)
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
